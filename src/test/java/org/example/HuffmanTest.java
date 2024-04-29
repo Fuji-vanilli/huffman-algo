@@ -36,18 +36,18 @@ public class HuffmanTest {
     }
 
     @Test
-    public void characterFrequenciesTest() {
+    void characterFrequenciesTest() {
         assertEquals(Map.of('a', 4, 'b', 6, 'c', 2),huffman.getCharacterFrequencies());
     }
 
     @Test
-    public void encodedTextTest() {
+    void encodedTextTest() {
         //assertEquals("111111000010010011", encodedText);
         assertThat(encodedText).isEqualTo("111111000010010011");
     }
     @Timeout(1)
     @Test
-    public void decodedTextTest() {
+    void decodedTextTest() {
         final String decodedText= huffman.decode("111111000010010011");
         //assertEquals("aaabbbbcbcba", huffman.decode("111111000010010011"));
         assertThat("aaabbbbcbcba").isEqualTo(decodedText);
