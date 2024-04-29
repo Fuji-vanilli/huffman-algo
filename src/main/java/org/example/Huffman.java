@@ -40,8 +40,8 @@ public class Huffman {
         while (queueNode.size()> 1) {
             queueNode.offer(new Node(queueNode.poll(), Objects.requireNonNull(queueNode.poll())));
         }
-
-        generateHuffmanCode(this.root= queueNode.poll(), "");
+        this.root= queueNode.poll();
+        generateHuffmanCode(this.root, "");
 
         return getEncodedText();
     }
