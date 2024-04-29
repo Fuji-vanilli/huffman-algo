@@ -47,8 +47,8 @@ public class Huffman {
     }
 
     private void generateHuffmanCode(Node node, String code) {
-        if (node instanceof Leaf) {
-            huffmanCode.put(((Leaf) node).getCharacter(), code);
+        if (node instanceof Leaf leaf) {
+            huffmanCode.put(leaf.getCharacter(), code);
             return;
         }
 
