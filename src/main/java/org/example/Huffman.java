@@ -79,8 +79,4 @@ public class Huffman {
 
         return sb.toString();
     }
-
-    public void primeTest() {
-
-    }
 }
