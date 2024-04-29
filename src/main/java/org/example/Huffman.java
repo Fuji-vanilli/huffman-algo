@@ -71,8 +71,8 @@ public class Huffman {
 
         for (char character: encodedText.toCharArray()) {
             current= character== '0'? current.getLeft(): current.getRight();
-            if (current instanceof Leaf) {
-                sb.append(((Leaf) current).getCharacter());
+            if (current instanceof Leaf leaf) {
+                sb.append(leaf.getCharacter());
                 current= this.root;
             }
         }
